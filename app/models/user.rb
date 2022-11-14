@@ -6,4 +6,5 @@ class User < ApplicationRecord
 
   validates :password, confirmation: true
   validates :password_confirmation, presence: true
+  validates :ratings, numericality: { greater_than_or_equal_to: 0, less_than_or_equal_to: 5 }
 end

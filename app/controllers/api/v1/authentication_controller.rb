@@ -31,7 +31,8 @@ class Api::V1::AuthenticationController < ApplicationController
 
   def signup_params
     params.permit(
-      :first_name, :last_name, :email, :password, :password_confirmation
+      :first_name, :last_name, :email, :password, :password_confirmation,
+      :address, :color, :ratings, :teachings
     )
   end
 end
